@@ -1,0 +1,93 @@
+INSERT INTO member VALUES ('23212423', 'Michael', 'Kim', '347-123-5221', '7287 Belmont Court Mahwah, NJ 07430');
+INSERT INTO member VALUES ('26485789', 'Kevin', 'Chen', '917-320-4221', '51 Winchester St.  Bronx, NY 10463');
+INSERT INTO member VALUES ('22838281', 'Justin', 'Chinchilla', '718-231-8919', '72 North Pleasant Ave.  Levittown, NY 11756');
+INSERT INTO member VALUES ('39488228', 'Alan', 'Lin', '929-420-4292', '7229 Hall St.  Ithaca, NY 14850');
+INSERT INTO member VALUES ('19127261', 'Sam', 'Chan', '520-328-3298', '649 N. Wintergreen Court  Ridgewood, NY 11385');
+INSERT INTO member VALUES ('30282818', 'Ash', 'Finney', '319-238-9292', '8411 Sugar Street  Staten Island, NY 10314');
+INSERT INTO member VALUES ('19283828', 'Miyah', 'Huang', '718-292-9292', '207 Lilac Lane  Buffalo, NY 14221');
+INSERT INTO member VALUES ('29102833', 'Fredrick', 'Ramsey', '626-232-2313', '8296 Charles Drive  Bronx, NY 10451');
+INSERT INTO member VALUES ('17292835', 'Lisa', 'Short', '929-232-1231', '9425 Wild Horse St.  Jamaica, NY 11435 ');
+INSERT INTO member VALUES ('20188826', 'Evan', 'Mackenzie', '812-323-3021', '59 Hamilton Rd.  Brooklyn, NY 11229');
+
+
+INSERT INTO device VALUES('IpadProGen3', 'Apple', '799.99');
+INSERT INTO device VALUES('MacbookPro', 'Apple', '1399.99');
+INSERT INTO device VALUES('SurfaceBook3', 'Microsoft', '2299.99');
+INSERT INTO device VALUES('USBCAC', 'Apple', '25.99'); 
+INSERT INTO device VALUES('IpadAirGen4', 'Apple', '599.99');
+INSERT INTO device VALUES('Ti89Calculator', 'Texas Instruments', '129.99');
+INSERT INTO device VALUES('Laptop3RD', 'Microsoft', '799.99');
+INSERT INTO device VALUES('USBCharger', 'Apple', '799.99');
+INSERT INTO device VALUES('IphoneCharger', 'Apple', '799.99');
+INSERT INTO device VALUES('GalaxyTabletA', 'Samsung', '149.99');
+INSERT INTO device VALUES('PortableCharger', 'Sony', '49.99');
+INSERT INTO device VALUES('SonyBud', 'Sony', '299.99');
+
+INSERT INTO individualDevice VALUES('0000304500', 'IpadProGen3', 'available')
+INSERT INTO individualDevice VALUES('0000304501', 'IpadProGen3', 'available')
+INSERT INTO individualDevice VALUES('0000304502', 'IpadProGen3', 'available')
+INSERT INTO individualDevice VALUES('0000759218', 'MacbookPro', 'available')
+INSERT INTO individualDevice VALUES('0000759219', 'MacbookPro', 'available')
+INSERT INTO individualDevice VALUES('0000759220', 'MacbookPro', 'available')
+INSERT INTO individualDevice VALUES('0000837481', 'SonyBud', 'available');
+INSERT INTO individualDevice VALUES('0000837482', 'SonyBud', 'available');
+INSERT INTO individualDevice VALUES('0000837483', 'SonyBud',  'available');
+INSERT INTO individualDevice VALUES ( '0000006481', 'Ti89Calculator', 'available');
+INSERT INTO individualDevice VALUES ( '0000006482', 'Ti89Calculator', 'available');
+INSERT INTO individualDevice VALUES ( '0000006483', 'Ti89Calculator', 'available');
+
+
+INSERT INTO librarian VALUES ('0005', 'Calvin', 'pinegar', '305-404-4736', '2264 Mount TaborPutnam Valley, NY 10579')
+INSERT INTO librarian VALUES ('0006', 'Conal', 'Carty', '312-423-4296', '53 Howard St.  New York, NY 10033')
+INSERT INTO librarian VALUES ('0007', 'Melody', 'Cook', '917-308-5698', '93 Kingston Street  Corona, NY 11368')
+INSERT INTO librarian VALUES ('0008', 'Kevin', 'Durant', '301-224-4826', '550 Spruce St.  Webster, NY 14580')
+INSERT INTO librarian VALUES ('0009', 'Emma', 'Morse', '929-928-4736', '8213 Bellevue Circle  Jackson Heights, NY 11372')
+INSERT INTO librarian VALUES ('0010', 'Adriana', 'Stokes', '347-647-0123', '44 Woodland Ave.  Poughkeepsie, NY 12603')
+INSERT INTO librarian VALUES ('0011', 'Joe', 'Lamb', '929-212-3212', '21 Delaware Dr.  Brentwood, NY 11717')
+INSERT INTO librarian VALUES ('0012', 'Marshall', 'Moller', '636-643-7270', '70 San Pablo St.  Bronx, NY 10472')
+INSERT INTO librarian VALUES ('0013', 'Juan', 'Patrick', '718-408-5698', '8196 Peachtree Street  New York, NY 10011')
+
+
+INSERT INTO publisher VALUES ('000724', 'Suzanne Collins', '557 Broadway New York, NY 10012 USA');
+INSERT INTO publisher VALUES ('000895', 'pearson', '330 Hudson St floor 9, New York, NY 10013')
+INSERT INTO publisher VALUES ('000456', 'McGraw Hill', '333 Hudson St floor 10, New York, NY 10013')
+
+INSERT INTO book VALUES ( 'The Hunger Games', '000724', 'Suzanne Collins', '14.99');
+INSERT INTO book VALUES ( 'Fundamentals of Database Systems', '000895', 'Ramez Elmasri, Shamkant B Navathe, Shamkant Navathe', '154.66')
+INSERT INTO book Values ('Fundamentals of Corporate Finance', '000456', 'Stephen Ross', '121.42')
+
+
+INSERT INTO individualBook VALUES ( '829271728382', 'The Hunger Games', '3rd', 'unavailable');
+INSERT INTO individualBook VALUES ( '829271728383', 'The Hunger Games', '3rd', 'available');
+INSERT INTO individualBook VALUES ( '829271728384', 'The Hunger Games', '3rd', 'available');
+INSERT INTO individualBook VALUES ( '238392383727', 'Fundamentals of Database Systems', '7th', 'available')
+INSERT INTO individualBook VALUES ( '238392383728', 'Fundamentals of Database Systems', '7th', 'available')
+INSERT INTO individualBook VALUES ( '238392383729', 'Fundamentals of Database Systems', '7th', 'available')
+INSERT INTO individualBook VALUES ( '000000001382', 'Fundamentals of Corporate Finance', '12rd', 'available');
+INSERT INTO individualBook VALUES ( '000000001383', 'Fundamentals of Corporate Finance', '12rd', 'available');
+
+
+INSERT INTO IndividualBook_Librarian VALUES ('000000001382', '0012');
+INSERT INTO IndividualBook_Librarian VALUES ('000000001383', '0012');
+INSERT INTO IndividualBook_Librarian VALUES ('238392383727', '0010');
+INSERT INTO IndividualBook_Librarian VALUES ('238392383728', '0010');
+INSERT INTO IndividualBook_Librarian VALUES ('238392383729', '0010');
+INSERT INTO IndividualBook_Librarian VALUES ('829271728384', '0009');
+INSERT INTO IndividualBook_Librarian VALUES ('829271728383', '0013');
+INSERT INTO IndividualBook_Librarian VALUES ('829271728382', '0011');
+
+
+INSERT INTO IndividualDevice_Librarian VALUES ('0000837481', '0006');
+INSERT INTO IndividualDevice_Librarian VALUES ('0000837482', '0006');
+INSERT INTO IndividualDevice_Librarian VALUES ('0000837483', '0006');
+INSERT INTO IndividualDevice_Librarian VALUES ('0000006481', '0009');
+INSERT INTO IndividualDevice_Librarian VALUES ('0000006482', '0009');
+INSERT INTO IndividualDevice_Librarian VALUES ('0000006483', '0009');
+INSERT INTO IndividualDevice_Librarian VALUES ('0000304500', '0008');
+INSERT INTO IndividualDevice_Librarian VALUES ('0000304501', '0007');
+INSERT INTO IndividualDevice_Librarian VALUES ('0000304502', '0011');
+INSERT INTO IndividualDevice_Librarian VALUES ('0000759218', '0005');
+INSERT INTO IndividualDevice_Librarian VALUES ('0000759219', '0005');
+INSERT INTO IndividualDevice_Librarian VALUES ('0000759220','0006');
+
+
