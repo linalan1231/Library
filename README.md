@@ -1,7 +1,7 @@
 # Library Management System
 
 ## Introduction
-This project provides a database system solution for a College Library. The system is designed to handle the rental and return of books and electronic devices, ensuring efficient management and tracking of resources. The solution was built upon the conversion process, ERD (Entity Relationship Diagram), and Relational Models. Then, from Relational Models to Normalized models. Applications such as Azure Database for PostgresSQL, Datagrip, were used to create the physical database system as well as manage the database. The normalization process shows that the database system satisfies the first, second, and third normal forms, avoiding data anomalies and simplifying data management. 
+This project provides a database system solution for a College Library. The system is designed to handle the rental and return of books and electronic devices, ensuring efficient management and tracking of resources. The solution was built upon the conversion process, ERD (Entity Relationship Diagram), and Relational Models. Then, from Relational Models to Normalized models. Applications such as Microsoft Access, DB Schema, were used to create the physical database system as well as manage the database. The normalization process shows that the database system satisfies the first, second, and third normal forms, avoiding data anomalies and simplifying data management. 
 
 ## Requirements 
 - Availability of individual books and devices 
