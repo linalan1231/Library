@@ -13,7 +13,7 @@ This project provides a database system solution for a College Library. The syst
 - Reservation cancellation status
 
 ## ERD using UML Notation
-<img width="1140" alt="Screenshot 2024-06-17 at 12 41 19 PM" src="https://github.com/linalan1231/Library/assets/70352593/0d66b7b3-31c1-4177-824d-7152d931060b">
+<img width="914" alt="Screenshot 2024-06-17 at 12 44 12 PM" src="https://github.com/linalan1231/Library/assets/70352593/a715f633-b311-4840-a974-56346c5a912f">
 
 ## Relational Models 
 - **Faculty**(`memberID`, `position`)
