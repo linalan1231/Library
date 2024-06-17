@@ -1,0 +1,75 @@
+--How many MacBook Pros does the library have?
+SELECT COUNT(*) as TotalNumber
+FROM individualDevice
+WHERE modelName = 'MacbookPro'
+
+
+--What is the most expensive device name, maker, price in the library?
+SELECT *
+FROM device
+WHERE price =(SELECT MAX(price) FROM device)
+
+
+--What is the average price of Apple devices in the library? (Round to the nearest cents)
+SELECT ROUND(AVG(price),2) as avgPrice
+FROM device
+WHERE maker = 'Apple'
+
+
+--How many devices does librarian Conal Carty manage?
+SELECT COUNT(*) as DeviceNumber
+FROM individualDevice_Librarian IDL, librarian L
+WHERE IDL.librarianID = L.librarianID AND
+L.firstName = 'Conal' AND
+L.lastName = 'Carty'
+
+
+--Write a query to display bookID, bookTitle of the books that are available at the moment.
+SELECT i.bookID, i.bookTitle
+FROM individualBook i
+WHERE i.status = 'available'
+
+
+--Write a query to show the publisher’s name and address for a book called ‘The Hunger Games’
+SELECT p.publisherName, p.address
+FROM book b, publisher p
+WHERE b.bookTitle = 'The Hunger Games' AND
+b.publisherID = p.publisherID
+
+--Write a query to show names and number of borrowings of top three students who borrowed the most devices/books.
+SELECT TOP 3 firstName&" "&lastName as Name, BorrowingNum
+FROM (
+SELECT b.memberID,  m.firstName, m.lastName, COUNT(b.borrowingID) AS BorrowingNum
+FROM borrowing b, member m
+WHERE b.memberID = m.memberID
+GROUP BY b.memberID, m.firstName, m.lastName
+)
+ORDER BY BorrowingNum DESC
+
+--Write a query to show reservationID and last name, first name of people who canceled their reservations.
+SELECT r.reservationID, m.firstName & " " & m.lastName AS Name
+FROM reservation r, member m
+WHERE r.redeemed = NO AND
+r.memberID = m.memberID
+
+--Write a query to display borrowing date, member name, book name, late days of all late returns. Order the result by date.
+SELECT b.dateBorrowed AS BorrowingDate, m.firstName & " " & m.lastName AS Name, indBook.bookTitle AS BookName, b.dateReturned-b.dateDue AS DaysLate
+FROM borrowing AS b, member AS m, borrowing_individualBook AS bindBook, individualBook AS indBook
+WHERE b.dateReturned > b.dateDue AND bindBook.borrowingID = b.borrowingID AND  b.memberID = m.memberID AND
+bindBook.BookID = indBook.BookID
+ORDER BY b.dateBorrowed;
+
+--Write a query to display borrowing date, member name, book name, returned dates of book borrowings in December 2020. Order the result by date.
+SELECT b.dateBorrowed AS BorrowingDate, m.firstName & " " & m.lastName AS Name, indBook.bookTitle AS BookName, b.dateReturned AS ReturnedDate
+FROM borrowing AS b, member AS m, borrowing_individualBook AS bindBook, individualBook AS indBook
+WHERE 
+bindBook.borrowingID = b.borrowingID 
+AND
+b.memberID = m.memberID 
+AND
+bindBook.BookID = indBook.BookID 
+AND
+b.dateBorrowed 
+BETWEEN #12/1/2020# AND #12/31/2020#
+ORDER BY b.dateBorrowed;
+
